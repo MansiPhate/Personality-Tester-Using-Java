@@ -4,6 +4,12 @@
 It's a fun and interactive tool that not only helps users explore aspects of their personality but also serves as a practical demonstration of Java programming fundamentals.
 ---
 
+# Note
+
+This project only work on Laptop via port does not work on Mobile if try[because mobile device does not know what 'localhost:9090' is]
+
+---
+
 ## 🚀 Features
 
 - 🎯 15 multiple-choice personality questions
@@ -48,6 +54,7 @@ It's a fun and interactive tool that not only helps users explore aspects of the
 - Introduce a leaderboard or community insights
 - Offer downloadable personality reports (PDF)
 - Translate the quiz into multiple languages
+- To get it work via port on mobile 
 ---
 
 ## 🧪 How to Run
