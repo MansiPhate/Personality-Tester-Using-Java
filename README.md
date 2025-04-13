@@ -6,7 +6,7 @@ It's a fun and interactive tool that not only helps users explore aspects of the
 
 # Note
 
-This project only work on Laptop via port does not work on Mobile if try[because mobile device does not know what 'localhost:9090' is]
+This project only work on Laptop via port does not work on Mobile if try because mobile device does not know what 'localhost:9090' is!!
 
 ---
 
