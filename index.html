@@ -8,87 +8,72 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <nav>
-      <div class="logo">
-        🧠 <span>Personality Tester</span>
-      </div>
-    </nav>
+
+  <!-- 🔝 Navigation -->
+  <header class="main-header">
+    <div class="nav-brand">
+      <span role="img" aria-label="brain">🧠</span> <strong>VibeCheck</strong>
+    </div>
   </header>
 
-  <!-- Main App Container -->
-  <div class="app-container">
-    
-    <!-- Page Title -->
-    <h1 id="title">Discover Your Inner Vibe</h1>
-
-    <!-- Name Input -->
-    <div class="username-input" id="start-screen">
-      <input type="text" id="username" placeholder="Enter your name..." aria-label="Enter your name"/>
-      <button id="start-btn" aria-label="Start Test">Start Test</button>
+  <!-- 💫 Welcome / Start -->
+  <section id="start-section" class="section active">
+    <div class="card start-card">
+      <h1 class="title">Discover Your Inner Vibe</h1>
+      <p class="subtitle">Take the quiz to find your true personality type.</p>
+      <input type="text" id="username" placeholder="Enter your name..." aria-label="Name input" />
+      <button id="start-btn" class="primary-btn" aria-label="Start Test">Start Quiz</button>
     </div>
+  </section>
 
-    <!-- Loading State -->
-    <div id="loading" style="display: none;">Loading your quiz... ⏳</div>
-
-    <!-- Quiz Section -->
-    <div class="container" id="quiz-container" style="display: none;">
-
-      <!-- Question Box -->
-      <div id="question-container" class="question-container" style="display: none;">
-        <p id="question-text">Loading...</p>
-        <div id="options"></div>
-
-        <!-- Progress Bar -->
-        <div id="progress-bar-container">
-          <div id="progress-bar"></div>
-        </div>
-
-        <!-- Navigation Buttons -->
-        <div id="button-area">
-          <button id="back-btn" aria-label="Go back">Back</button>
-          <button id="skip-btn" aria-label="Skip question">Skip</button>
-          <button id="submit-btn" style="display: none;" aria-label="Submit answers">Submit</button>
-          <button id="restart-btn" style="display: none;" aria-label="Restart quiz">Restart</button>
-          <button id="share-btn" style="display: none;" aria-label="Share result">Share Result</button>
+  <!-- ❓ Quiz Area -->
+  <section id="quiz-section" class="section hidden">
+    <div class="card quiz-card">
+      <h2 id="quiz-username" class="quiz-header"></h2>
+      <div class="question-block">
+        <p id="question-text" class="question-text">Loading question...</p>
+        <div id="options" class="options-container"></div>
+        <div class="progress-wrap">
+          <div id="progress-bar" class="progress-bar"></div>
         </div>
       </div>
+      <div class="quiz-buttons">
+        <button id="back-btn">Back</button>
+        <button id="skip-btn">Skip</button>
+        <button id="submit-btn" class="hidden">Submit</button>
+        <button id="restart-btn" class="hidden">Restart</button>
+        <button id="share-btn" class="hidden">Share Result</button>
+      </div>      
+    </div>
+  </section>
 
-      <!-- Share Menu -->
-      <div id="share-menu" style="display: none;">
-        <p>📣 Share your results on:</p>
-        <button onclick="shareTo('twitter')" aria-label="Share to Twitter">Twitter/X</button>
-        <button onclick="shareTo('whatsapp')" aria-label="Share to WhatsApp">WhatsApp</button>
-        <button onclick="shareTo('linkedin')" aria-label="Share to LinkedIn">LinkedIn</button>
-        <button onclick="shareTo('copy')" aria-label="Copy link">Copy Link</button>
+  <!-- 🎉 Result Display -->
+  <section id="result-section" class="section hidden">
+    <div class="card result-card">
+      <h2 id="result-title" class="result-title">Your Result</h2>
+      <p id="result-description" class="result-description"></p>
+      <div id="result-details" class="result-details"></div>
+      <div class="result-actions">
+        <button id="result-restart-btn" class="secondary-btn">Restart</button>
+        <button id="result-share-btn" class="primary-btn">Share Result</button>
       </div>
     </div>
+  </section>
 
-    <!-- Result Section -->
-    <section id="result-container" class="hidden" style="display: none; opacity: 0; transition: opacity 0.5s ease;">
+  <!-- 📤 Share Menu -->
+  <div id="share-menu" class="share-menu hidden">
+    <p>📣 Share your results:</p>
+    <button onclick="shareTo('twitter')">Twitter</button>
+    <button onclick="shareTo('whatsapp')">WhatsApp</button>
+    <button onclick="shareTo('linkedin')">LinkedIn</button>
+    <button onclick="shareTo('copy')">Copy Link</button>
+  </div>
 
-      <!-- WRAPPED all result content here -->
-      <div id="result-text">
-        <h2 id="result-title">Your Personality Type</h2>
-        <p id="result-description"></p>
-        <div id="result-details" class="result-details"></div>
-      </div>
-      <!-- END WRAP -->
-
-      <div class="result-buttons">
-        <button id="result-restart-btn" class="btn" onclick="restartQuiz()" aria-label="Restart the test">Restart Test</button>
-        <button id="result-share-btn" class="btn" onclick="shareResult()" aria-label="Share your result">Share Result</button>
-      </div>
-    </section>
-  </div> 
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 Personality Test. All Rights Reserved. 🚀</p>
+  <!-- 👣 Footer -->
+  <footer class="main-footer">
+    <p>&copy; 2025 VibeCheck. Built with 💜</p>
   </footer>
 
-  <!-- Script -->
   <script src="script.js" defer></script>
 </body>
 </html>
